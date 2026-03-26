@@ -21,9 +21,9 @@ public abstract class Room {
         return isBooked;
     }
 
-    public void bookRoom() {
+    public void bookRoom() throws BookingException {
         if (isBooked) {
-            throw new RuntimeException("Room already booked!");
+            throw new BookingException("Room already booked!");
         }
         isBooked = true;
     }
