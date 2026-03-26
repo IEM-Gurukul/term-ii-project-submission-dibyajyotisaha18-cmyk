@@ -32,7 +32,7 @@ public class Hotel {
         return null;
     }
 
-    public void bookRoom(int roomNumber) {
+    public void bookRoom(int roomNumber) throws BookingException {
         Room room = findRoom(roomNumber);
         if (room == null) {
             throw new RuntimeException("Invalid room number!");

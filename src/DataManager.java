@@ -22,7 +22,7 @@ public class DataManager {
         }
     }
 
-    public static List<Room> loadRooms() {
+    public static List<Room> loadRooms() throws BookingException {
         List<Room> rooms = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
