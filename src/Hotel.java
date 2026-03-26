@@ -1,6 +1,8 @@
+
 import java.util.*;
 
 public class Hotel {
+
     private List<Room> rooms;
 
     public Hotel() {
@@ -15,6 +17,10 @@ public class Hotel {
         for (Room room : rooms) {
             room.displayDetails();
         }
+    }
+
+    public List<Room> getRooms() {
+        return rooms;
     }
 
     public Room findRoom(int roomNumber) {
