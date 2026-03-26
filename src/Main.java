@@ -54,6 +54,8 @@ public class Main {
 
                     case 4:
                         System.out.println("Thank you!");
+                        DataManager.saveRooms(hotel.getRooms());
+                        System.out.println("Thank you!");
                         System.exit(0);
 
                     default:
