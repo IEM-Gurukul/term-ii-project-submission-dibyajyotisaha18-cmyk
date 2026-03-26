@@ -1,19 +1,28 @@
+
 import java.util.*;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         Hotel hotel = new Hotel();
 
-        // Add sample rooms
-        hotel.addRoom(new SingleRoom(101));
-        hotel.addRoom(new SingleRoom(102));
-        hotel.addRoom(new DoubleRoom(201));
-        hotel.addRoom(new DoubleRoom(202));
+        List<Room> loadedRooms = DataManager.loadRooms();
+
+        if (loadedRooms.isEmpty()) {
+            hotel.addRoom(new SingleRoom(101));
+            hotel.addRoom(new SingleRoom(102));
+            hotel.addRoom(new DoubleRoom(201));
+            hotel.addRoom(new DoubleRoom(202));
+        } else {
+            for (Room r : loadedRooms) {
+                hotel.addRoom(r);
+            }
+        }
 
         while (true) {
-            System.out.println("\n===== HOTEL BOOKING SYSTEM =====");
+            System.out.println("\nHOTEL BOOKING SYSTEM:");
             System.out.println("1. View Rooms");
             System.out.println("2. Book Room");
             System.out.println("3. Cancel Booking");
@@ -52,4 +61,7 @@ public class Main {
                 }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
-            }}}}
+            }
+        }
+    }
+}
