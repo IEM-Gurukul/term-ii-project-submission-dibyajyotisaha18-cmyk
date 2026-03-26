@@ -2,10 +2,13 @@
 # PCCCS495 – Term II Project
 
 ## Project Title
+
 Hotel Booking System
+
 ---
 
 ## Problem Statement (max 150 words)
+
 Design and implement a console-based Hotel Booking System in Java that manages hotel room
 reservations. The system should allow users to view available rooms, check room details, book
 rooms, and cancel bookings. Different room types such as Single Room and Double Room will be
@@ -15,11 +18,14 @@ including abstraction, inheritance, polymorphism, and exception handling. It sho
 errors such as attempting to book an already reserved room or entering an invalid room number.
 The application will be menu-driven and modular, allowing efficient interaction with the system and
 proper management of hotel bookings.
+
 ---
 
 ## Target User
+
 Hotel receptionists, hotel managers, and hotel staff who need to manage room availability,
 bookings, and cancellations efficiently in a small hotel or guest house.
+
 ---
 
 ## Core Features
@@ -45,6 +51,7 @@ room.
 ---
 
 ## Proposed Architecture Description
+
 The system follows a modular object-oriented architecture. The abstract Room class defines the
 basic structure and functionality common to all rooms. Specific room types such as SingleRoom
 and DoubleRoom extend this class and implement their own details using polymorphism. The Hotel
@@ -53,6 +60,7 @@ and cancellation operations. A custom exception class handles error situations l
 book an already reserved room. The main class provides a menu-driven interface that allows the
 user to interact with the system and perform different booking operations. These components work
 together to provide an organized and efficient hotel booking management system.
+
 ---
 
 ## How to Run
